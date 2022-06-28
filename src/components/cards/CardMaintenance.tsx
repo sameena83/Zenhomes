@@ -5,8 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
 
 export default function CardMaintenance() {
+  const history = useNavigate();
   return (
     <Card sx={{ maxWidth: 345}}>
       <CardMedia
@@ -24,7 +26,7 @@ export default function CardMaintenance() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Click here to upload images</Button>
+        <Button size="small" onClick={()=>history("/pictures")}>Click here to upload images</Button>
       </CardActions>
     </Card>
   );

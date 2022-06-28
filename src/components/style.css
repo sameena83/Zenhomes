@@ -17,3 +17,15 @@
     flex-flow: wrap;
     margin-right:10px;
 }
+.pictures{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+    margin-right:10px;
+}
+.left{
+    margin-right:20px;
+    margin-left:100px;
+}

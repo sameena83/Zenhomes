@@ -6,7 +6,8 @@ import CardLaws from './cards/CardLaws'
 import CardMaintenance from './cards/CardMaintenance';
 import CardStats from './cards/CardStats';
 import CardEvents from './cards/CardEvents';
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar';
+import CardFinancial from './cards/CardFinancial';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <CardMaintenance/>
           <CardStats/>
           <CardEvents/>
+          <CardFinancial/>
 
         </Box>
     </div>

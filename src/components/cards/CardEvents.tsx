@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 
 export default function CardEvents() {
+  const history = useNavigate();
   return (
     <Card sx={{ maxWidth: 345}}>
       <CardMedia
@@ -25,7 +26,7 @@ export default function CardEvents() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" >Click here to go to events</Button>
+        <Button size="small" onClick={()=>history("/event")} >Click here to go to events</Button>
       </CardActions>
     </Card>
   );
