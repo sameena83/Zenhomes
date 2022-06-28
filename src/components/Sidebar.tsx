@@ -7,10 +7,10 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import HomeIcon from "@mui/icons-material/Home";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ArticleIcon from '@mui/icons-material/Article';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ArticleIcon from "@mui/icons-material/Article";
+import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 const drawerWidth = 240;
 
@@ -23,24 +23,64 @@ interface Props {
 }
 
 export default function ResponsiveDrawer(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const itemList = [{icon:<><HomeIcon sx={{marginRight: '1rem'}}/></>, name: 'Dashboard'}, {icon:<><AttachMoneyIcon sx={{marginRight: '1rem'}}/></>, name: 'Financial Statement'}, {icon:<><ArticleIcon sx={{marginRight: '1rem'}}/></>, name: 'Core data'}, {icon:<><FavoriteBorderIcon sx={{marginRight: '1rem'}}/></>, name: 'Favourites'}, {icon:<><CardGiftcardIcon sx={{marginRight: '1rem'}}/></>, name: 'Premium upgrade'}];
-    const drawer = (
+  const itemList = [
+    {
+      icon: (
+        <>
+          <HomeIcon sx={{ marginRight: "1rem" }} />
+        </>
+      ),
+      name: "Dashboard",
+    },
+    {
+      icon: (
+        <>
+          <AttachMoneyIcon sx={{ marginRight: "1rem" }} />
+        </>
+      ),
+      name: "Financial Statement",
+    },
+    {
+      icon: (
+        <>
+          <ArticleIcon sx={{ marginRight: "1rem" }} />
+        </>
+      ),
+      name: "Core data",
+    },
+    {
+      icon: (
+        <>
+          <FavoriteBorderIcon sx={{ marginRight: "1rem" }} />
+        </>
+      ),
+      name: "Favourites",
+    },
+    {
+      icon: (
+        <>
+          <CardGiftcardIcon sx={{ marginRight: "1rem" }} />
+        </>
+      ),
+      name: "Premium upgrade",
+    },
+  ];
+  const drawer = (
     <div>
       <Toolbar />
       <Divider />
-      <ListItemButton >
+      <ListItemButton>
         <ListItemText>EXPLORE MORE</ListItemText>
       </ListItemButton>
       <Divider />
-      {itemList.map(item => (<ListItem><ListItemButton>{item.icon}{item.name}</ListItemButton></ListItem>)
-        )}
-
+      {itemList.map((item) => (
+        <ListItem>
+          <ListItemButton>
+            {item.icon}
+            {item.name}
+          </ListItemButton>
+        </ListItem>
+      ))}
 
       <Divider />
     </div>
@@ -55,7 +95,6 @@ export default function ResponsiveDrawer(props: Props) {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
-            
           },
         }}
         open
