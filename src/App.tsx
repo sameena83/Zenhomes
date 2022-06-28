@@ -6,6 +6,13 @@ import Home from "./components/Home";
 import Sidebar from './components/Sidebar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FinanceTable from "./components/Finances";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/Login'
+import Logged from './components/AlreadyLogged'
+import Detail from './components/Detail'
+
+import './App.css';
+
 
 function App() {
   const theme = createTheme({
@@ -22,12 +29,15 @@ function App() {
           <Nav />
           <Sidebar />
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element= {<Login/>}/>
+          <Route path="/logged" element= {<Logged/>}/>
+          <Route path="/details" element= {<Detail/>}/>
+          <Route path="/dash" element={<Home/>} />
           <Route path="/finances" element={<FinanceTable />} />
         </Routes>
       </ThemeProvider>
     </div>
   );
-}
 
+}
 export default App;
