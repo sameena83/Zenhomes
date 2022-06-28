@@ -1,12 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Sidebar from './components/Sidebar'
+import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <Sidebar />
-  );
+  return(
+   <Footer />
+  )
 }
 
 export default App;
