@@ -57,7 +57,7 @@ export default function Nav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{background:'#fff'}}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -121,7 +121,7 @@ export default function Nav() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              
             >
               <AccountCircle /> 
             </IconButton>
