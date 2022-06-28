@@ -1,32 +1,43 @@
 import React from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Sidebar from './components/Sidebar'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CardContract from "./components/CardComponents/CardContract"
-import CardStats from "./components/CardComponents/CardStats"
-import CardLaws from "./components/CardComponents/CardLaws"
-import CardMaintenance from "./components/CardComponents/CardMaintenance";
+import FinanceTable from "./components/Finances";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './components/Login'
+import Logged from './components/AlreadyLogged'
+import Detail from './components/Detail'
+
+import './App.css';
+
 
 function App() {
   const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#fff',
-      },
-    },
+    
+    zIndex: {
+      drawer: -1,
+      appBar: 10,
+    }
   });
 
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Nav />
-        <CardContract />
-        <CardStats />
-        <CardLaws />
-        <CardMaintenance />
+          <Nav />
+          <Sidebar />
+        <Routes>
+          <Route path="/" element= {<Login/>}/>
+          <Route path="/logged" element= {<Logged/>}/>
+          <Route path="/details" element= {<Detail/>}/>
+          <Route path="/dash" element={<Home/>} />
+          <Route path="/finances" element={<FinanceTable />} />
+        </Routes>
       </ThemeProvider>
     </div>
   );
-}
 
+}
 export default App;
