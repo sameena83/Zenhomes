@@ -27,10 +27,10 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
           <Nav />
-          <Sidebar />
+          
         <Routes>
           <Route path="/" element= {<Login/>}/>
-          <Route path="/logged" element= {<Logged/>}/>
+          
           <Route path="/details" element= {<Detail/>}/>
           <Route path="/dash" element={<Home/>} />
           <Route path="/finances" element={<FinanceTable />} />
