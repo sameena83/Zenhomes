@@ -10,8 +10,7 @@ function Login() {
         password:""
         
     })
-    const navigate = useNavigate();
-  
+    const history = useNavigate();
 
    const[data,setData]=useState([])
     const getData=(e)=>{
@@ -37,6 +36,7 @@ function Login() {
         }else{
             console.log("data added successfully")
             localStorage.setItem("tenants",JSON.stringify(...data,inpval));
+            history("/details")
         }
 
     }
@@ -45,7 +45,7 @@ function Login() {
     <div className='container mt-3'>
         <section className="d-flex justify-content-between">
         <div className="left_data mt-8 " style={{width:"100%"}}>
-            <h3 className="text-center col-lg-6">Sign Up</h3>
+            <h3 className="text-center col-lg-6">Tenant Sign In</h3>
             <Form>
   <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
    
@@ -71,7 +71,7 @@ function Login() {
     Submit
   </Button>
 </Form>
-<p className='mt-3'>Already Have an account <button onClick={()=>navigate("/logged")}>SignIn</button></p>
+<p className='mt-3'>Start Using our App <span>Sign In</span></p>
                 
          </div>
             <div className="right_data " style={{width:"100%"}}>

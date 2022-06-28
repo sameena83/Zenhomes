@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login'
 import {Routes,Route} from 'react-router-dom'
 import Logged from './components/AlreadyLogged'
-import Home from './components/Home'
+import Detail from './components/Detail'
 
 import './App.css';
 
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element= {<Login/>}/>
         <Route path="/logged" element= {<Logged/>}/>
-        <Route path="/details" element= {<Home/>}/>
+        <Route path="/details" element= {<Detail/>}/>
       </Routes>
      
       
