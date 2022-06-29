@@ -11,6 +11,7 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import Snackbar, { SnackbarOrigin } from "@mui/material/Snackbar";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
+
 const drawerWidth = 240;
 export interface State extends SnackbarOrigin {
   open: boolean;
@@ -25,6 +26,8 @@ interface Props {
 }
 
 export default function ResponsiveDrawer(props: Props) {
+
+
   const [state, setState] = React.useState<State>({
     open: false,
     vertical: "top",
@@ -41,11 +44,7 @@ export default function ResponsiveDrawer(props: Props) {
   };
 
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
   const itemList = [
     {
       icon: (
@@ -103,7 +102,7 @@ export default function ResponsiveDrawer(props: Props) {
   );
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: 'flex' }}>
       <Drawer
         variant="permanent"
         sx={{
