@@ -15,13 +15,13 @@ import Pictures from './components/Pictures'
 import Budget from './components/Budget'
 
 import './App.css';
+import Footer from "./components/Footer";
 
 
 function App() {
   const theme = createTheme({
     
     zIndex: {
-      drawer: -1,
       appBar: 10,
     }
   });
@@ -41,6 +41,7 @@ function App() {
           <Route path="/pictures" element={<Pictures />} />
           <Route path="/budget" element={<Budget/>} />
         </Routes>
+        <Footer/>
       </ThemeProvider>
     </div>
   );
