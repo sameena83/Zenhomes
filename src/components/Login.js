@@ -36,7 +36,7 @@ function Login() {
         }else{
             console.log("data added successfully")
             localStorage.setItem("tenants",JSON.stringify(...data,inpval));
-            history("/details")
+            history("/dash")
         }
 
     }

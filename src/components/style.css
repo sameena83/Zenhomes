@@ -1,0 +1,31 @@
+.section{
+    display: flex;
+    gap: 10px;
+}
+.left_section{
+ 
+}
+.options{
+    display:flex;
+    gap:20px;
+}
+.event_sub{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+    margin-right:10px;
+}
+.pictures{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: wrap;
+    margin-right:10px;
+}
+.left{
+    margin-right:20px;
+    margin-left:100px;
+}
