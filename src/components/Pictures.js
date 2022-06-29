@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-
+import Box from "@mui/material/Box";
 
 
 export default function Pictures() {
@@ -31,8 +31,8 @@ export default function Pictures() {
        
     ]
   return (
-    <>
-    <div className="form-container mt-5" style={{marginLeft:"100px"}}>
+    <Box sx={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr', alignItems:'center'}}>
+    <div className="form-container mt-5" style={{marginLeft:"100px", gridRowStart:1, gridRowEnd:3, alignItems:'center'}}>
     <Form>
   <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
    
@@ -56,24 +56,23 @@ export default function Pictures() {
   </Button>
 </Form>
 </div>
-    {maintainanceData.map((da)=>(
-    <div className="pictures">
-       
+
+      {maintainanceData.map((da)=>(
+      <div className="pictures" >
         <div className="left mt-5">
-            <img src={da.image}  style={{ width:"400px"}}alt=""/>
-
+          <img src={da.image}  style={{ width:"400px"}}alt=""/>
         </div>
-        <div className="right mt-5">
+          <div className="right mt-5" sx={{justifyContent:'center'}}>
             <h3>
-            {da.title}
+              {da.title}
             </h3>
-            <p>{da.topic}</p>
-
+             <p>{da.topic}</p>
         </div>
-       
-    </div>
-     ))}
-      </>
+      
+      </div>
+       ))}
+
+      </Box>
   )
  
 

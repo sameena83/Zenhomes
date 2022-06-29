@@ -14,6 +14,7 @@ import Event from './components/Event'
 import Pictures from './components/Pictures'
 
 import './App.css';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/event" element={<Event />} />
           <Route path="/pictures" element={<Pictures />} />
         </Routes>
+        <Footer/>
       </ThemeProvider>
     </div>
   );
