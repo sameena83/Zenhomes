@@ -12,6 +12,7 @@ import Logged from './components/AlreadyLogged'
 import Detail from './components/Detail'
 import Event from './components/Event'
 import Pictures from './components/Pictures'
+import Budget from './components/Budget'
 
 import './App.css';
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/finances" element={<FinanceTable />} />
           <Route path="/event" element={<Event />} />
           <Route path="/pictures" element={<Pictures />} />
+          <Route path="/budget" element={<Budget/>} />
         </Routes>
       </ThemeProvider>
     </div>

@@ -15,17 +15,17 @@ export default function Pictures() {
         {
             image: "https://image.shutterstock.com/image-photo/broken-door-when-man-forgot-260nw-656931061.jpg",
             title: "My Apartment Door is damaged",
-            topic:"I request you to fix this.Address:First floor no 1122",
+            topic:"I request you to fix this. My Address:First floor no 1122",
         },
         {
             image: "https://thumbs.dreamstime.com/z/full-garbage-bin-20565207.jpg",
             title: "Trash can full",
-            topic:"Please remove this",
+            topic:"Please remove trash from this bin",
         },
         {
             image: "https://media.istockphoto.com/photos/lots-of-cigarette-buds-on-sandy-background-picture-id187475970",
-            title: "Request for immidiate action",
-            topic:"Folks aare putting cigar buds,Kids cannot enjoy in the park ,please maintain it",
+            title: "Request for immediate action",
+            topic:"Folks are putting cigar buds,Kids cannot enjoy in the park ,please maintain it",
         },
        
        
