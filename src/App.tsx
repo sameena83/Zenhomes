@@ -20,7 +20,6 @@ function App() {
   const theme = createTheme({
     
     zIndex: {
-      drawer: -1,
       appBar: 10,
     }
   });

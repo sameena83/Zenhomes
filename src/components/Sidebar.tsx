@@ -95,6 +95,7 @@ export default function ResponsiveDrawer(props: Props) {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: drawerWidth,
+            marginTop: "5rem",
           },
         }}
         open
